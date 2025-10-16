@@ -1,0 +1,10 @@
+# Core dependencies for the XBRL AI project
+# Ingestion Agent
+# Pin specific or slightly broader ranges for known compatible versions
+# Check Docling's documentation for its preferred Pydantic version
+pydantic>=2.0,<3.0 # Use a range compatible with Docling's requirements
+pymupdf>=1.23.0    # PyMuPDF for potential fallbacks/auxiliary PDF operations
+# docling>=2.0.0     # Use the latest stable version compatible with your needs
+docling==2.1.0 # Pin to the specific, stable version found
+# Add other potential project dependencies here as we build more agents
+# e.g., fastapi, uvicorn, lxml, requests, etc. (Add these later when needed)

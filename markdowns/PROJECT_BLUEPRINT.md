@@ -1,6 +1,5 @@
-# 📄 XBRL AI Generator — Project Blueprint (v3.0)
-
-> ✅ **Status**: Phase 1 complete (Omesti Healthcare gold standard achieved)  
+# 📄 XBRL AI — Project Blueprint (v3.0)
+ 
 > ✅ **Goal**: Generate **100% SSM-compliant XBRL** + **human-readable Filing Report** from any MFRS/MPERS PDF  
 > ✅ **Architecture**: Agentic, HITL-enabled, xAI-powered, Next.js + FastAPI
 
@@ -95,11 +94,10 @@ xbrl-ai/
 - Mapping review screen - ability to view/edit with xAI + HITL 
 - Results page - Preview in the form of the Filing Report + XBRL instance. Allow to download these files.
 
-# Sample UIs for the Frontend.
+## 5. Sample UIs for the Frontend.
+![alt text](dashboard.png)
 
 
-
-
-
-
+## 📊 6. Quality Gates (LLM Evaluator)
+![alt text](LLM_Eval.png)
 

@@ -16,7 +16,39 @@ Build `evaluator_agent.py` that validates against Omesti ground truth. Check fac
 # Prompt 6: Next.js Frontend
 Build a Next.js 14 (App Router) dashboard with:
 - PDF upload. A list also showing previously upload page with status (uploading, in-progress, completed)
-- HITL review screen (confidence <98%). In the review allow view/edit/validate with xAI: click value → show PDF page + highlight elements on page
+![alt text](dashboard.png)
+- HITL review screen (confidence <98%). The screen should be similar to the Filing Report displaying all the fields and values. In the review allow view/edit/validate with xAI: click value → show PDF page + highlight elements on page
 - Preview and download XBRL + Filing Report
+
+
+# 🛠️ 6. Execution Steps for the above prompts 
+
+## Step 1: Set Up Environment
+``` bash
+# WSL2 Ubuntu 24.04
+sudo apt install tesseract-ocr poppler-utils
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3:8b
+```
+
+## Step 2: Run Backend
+``` bash
+cd backend
+source venv/bin/activate
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+## Step 3: Run Frontend
+``` bash
+cd frontend
+npm run dev
+```
+
+## Step 4: Test End-to-End
+1. Upload OHealthcare - AFS 2024.pdf
+2. Review mappings (HITL if confidence <98%)
+3. Download XBRL + Filing Report
+4. Verify against reference files
+
 
 
